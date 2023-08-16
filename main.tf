@@ -1,7 +1,5 @@
 variable "name" {}
 variable "location" {}
-variable "username" {}
-variable "password" {}
 
 provider "azurerm" {
   features {}
@@ -17,7 +15,7 @@ variable "subnet_address_prefixes" {
 
 module "networking" {
   source  = "app.terraform.io/nsb-tfc-demo-2023/networking/azurerm"
-  version = "0.12.0"
+  version = "~>1.0"
 
   name                    = var.name
   location                = var.location
